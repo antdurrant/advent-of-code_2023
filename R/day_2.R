@@ -31,6 +31,7 @@ part_2 <- function(x){
 }
 
 # go go go
-games <- get_max_per_game(readLines(file.path("data", "day_2", "input")))
+day_2 <- readLines(file.path("data", "day_2", "input"))
+games <- get_max_per_game(day_2)
 part_1(games)
 part_2(games)
