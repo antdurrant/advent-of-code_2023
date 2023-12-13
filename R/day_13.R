@@ -17,10 +17,12 @@ parse_input <- function(input){
 # part 1 is identical
 # part 2 has a single difference
 compare <- function(m, n, part){
+    a = m[seq(n),]
+    b = m[seq(from = n*2, to = n+1),]
     switch(
         part,
-        part_1 = identical(m[seq(n),,drop = FALSE], m[seq(from = n*2, to = n+1),, drop = FALSE]),
-        part_2 = sum(m[seq(n),,drop = FALSE] != m[seq(from = n*2, to = n+1),, drop = FALSE]) == 1
+        part_1 = identical(a, b),
+        part_2 = sum(a != b) == 1
     )
 }
 
